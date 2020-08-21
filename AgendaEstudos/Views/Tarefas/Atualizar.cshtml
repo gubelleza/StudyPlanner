@@ -1,0 +1,43 @@
+@model Tarefa
+
+<div class="container">
+  <h2>Atualizar Tarefa: @Model.Nome</h2>
+  <div>
+    <form asp-action="Atualizar" as method="post">
+      
+      <div asp-validation-summary="All" class="text-danger"></div>
+      
+      <input type="hidden" value="@Model.TarefaID" asp-for="TarefaID"/>
+      <input type="hidden" value="@Model.Nome" asp-for="Nome"/>
+      
+      <div class="form-group">
+        <label>Livro/Curso:</label>
+        <input type="text" asp-for="Bibligrafia" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>Unidade/Capítulo atual:</label>
+        <input type="text" asp-for="Unidade" class="form-control"/>
+      </div>
+      
+      <div class="form-group">
+        <label>Descricao:</label>
+        <input type="text" asp-for="Descricao" class="form-control"/>
+      </div>
+        
+      <div class="form-group">
+       <label>Prioridade</label>
+        <input type="range" min="-2" max="2" step="1" list="ticks"
+               asp-for="Prioridade" value="0" id="prioridade"/>
+        <datalist id="ticks">
+          @foreach (int i in new[] {-2, -1, 0, 1, 2}) {
+            <option value="@i">@i</option>
+          }
+        </datalist>
+      </div>
+      <div>
+        <input type="submit" class="btn btn-dark" value="Atualizar"/>
+      </div>
+    </form>
+  </div>
+</div>

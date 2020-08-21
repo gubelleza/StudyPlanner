@@ -1,0 +1,21 @@
+@model Tarefa
+<div class="d-flex flex-row">
+  <div class="mr-2">
+    <a asp-controller="SessaoEstudo" asp-action="IniciarSessao" 
+       asp-route-id="@Model.TarefaID" class="card-link btn btn-outline-success">Iniciar</a>
+  </div>
+  <div class="mr-2">
+    <a asp-action="Atualizar" asp-route-id="@Model.TarefaID" 
+       class="card-link btn btn-outline-dark">Atualizar</a>
+  </div>
+  <div>
+      <form asp-action="Deletar" method="post">
+        <input hidden asp-for="TarefaID"/>
+        <button type="submit" class="card-link btn btn-outline-danger"
+                onclick="return confirm('Confirmar exclusão da tarefa?');">
+          Deletar
+        </button>
+      </form>
+  </div>
+</div>
+

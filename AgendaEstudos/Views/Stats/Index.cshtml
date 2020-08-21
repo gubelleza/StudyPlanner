@@ -1,0 +1,35 @@
+@model StatsViewModel
+
+<div class="m-5 w-100 d-flex flex-row justify-content-center">
+
+<table class="table w-75 border border-secondary">
+  <thead class="thead-dark">
+  <tr class="text-center">
+    <th scope="col">#</th>
+    <th scope="col">Estudo</th>
+    <th scope="col">Horas Estudadas</th>
+    <th scope="col">Porcentagem</th>
+    <th scope="col">Porcentagem Corrigida</th>
+  </tr>
+  </thead>
+  <tbody>
+  @{ int i = 1;}
+  @foreach (var t in @Model.Tarefas) {
+    <tr class="text-center">
+      <th scope="row">
+        @i @{ i++;}
+      </th>
+      <td>@t.Nome</td>
+      <td>@t.FHorasEstudadas</td>
+      <td>
+        @{string pctg = $"{(t.HorasEstudadas / Model.HorasTotais)*100:0.00}%";} @pctg
+      </td>
+      <td>
+        @{string pctgFator = $"{(t.HorasEstudadasCorrigidas() / Model.HorasTotaisFator)*100:0.00}%";} @pctgFator
+      </td>
+    </tr>
+  }
+  </tbody>
+</table>
+
+</div>

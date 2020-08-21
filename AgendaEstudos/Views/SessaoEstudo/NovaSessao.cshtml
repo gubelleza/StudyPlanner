@@ -1,0 +1,61 @@
+@model SessaoEstudoViewModel
+<div class="d-flex flex-row justify-content-center align-items-center w-100">
+
+  <div class="card border border-secondary m-2 p-0" style="width: 35rem;">
+    <!-- 
+      Informações do Card de Sessão 
+    -->
+    <div class="card-body">
+      <div class="bg-light border border-secondary rounded p-3 mb-3">
+        <h5 class="card-title">Estudando @Model.Tarefa.Nome</h5>
+        <hr/>
+        <div class="mb-2">
+          <i class="fa fa-exclamation-circle"></i>
+          <span
+            class="card-subtitle font-weight-bold">Início da Sessão:
+            @Model.HorarioInicio.ToString("dd/MM/yyyy hh:mm")
+          </span>
+        </div>
+        <div class="mb-2">
+          <i class="fa fa-address-book"></i>
+          <span class="card-subtitle font-weight-bold">Livro/Curso: @Model.Tarefa.Bibligrafia</span>
+        </div>
+        <div class="mb-2">
+          <i class="fa fa-book-reader"></i>
+          <span class="card-subtitle font-weight-bold">Unidade/Capítulo: @Model.Tarefa.Unidade</span>
+        </div>
+        <div class="mb-2">
+          <i class="fa fa-clock"></i>
+          <span class="card-subtitle font-weight-bold">
+            Horas estudadas: @Model.Tarefa.FHorasEstudadas
+          </span>
+        </div>
+        <p class="card-text text-justify">@Model.Tarefa.Descricao</p>
+      </div>
+      <div>
+        <!-- 
+        Botões de Controle da Sessão 
+        -->
+        <div class="d-flex flex-row">
+          <div class="mr-2"> <!-- Concluir e Salvar Sessão de Estudo -->
+            <form asp-action="ConcluirSessao" method="post">
+              <input hidden asp-for="@Model.Tarefa.TarefaID"/>
+              <input hidden asp-for="HorarioInicio"/>
+              <button type="submit" class="card-link btn btn-outline-dark">Concluir</button>
+            </form>
+          </div>
+          <div class="mr-2"> <!-- Reiniciar Sem Salvar Sessão de Estudo -->
+            <a asp-action="IniciarSessao" asp-route-id="@Model.Tarefa.TarefaID"
+               class="card-link btn btn-outline-success">Reiniciar</a>
+          </div>
+          <div> <!-- Sair Sem Salvar Sessão de Estudo -->
+            <a type="submit" asp-controller="Tarefas" asp-action="Listar" class="card-link btn btn-outline-danger"
+               onclick="return confirm('Ao sair seu progresso não será registrado. Deseja sair?');">
+              Sair
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

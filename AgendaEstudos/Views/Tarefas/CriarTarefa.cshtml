@@ -1,0 +1,46 @@
+@model Tarefa
+
+<div class="container">
+  <div>Criar Tarefa</div>
+  <div>
+    <form asp-action="CriarTarefa" method="post" 
+          onsubmit="confirmUpdate.disabled=true; confirmUpdate.value='Aguarde'; return true;">
+      
+      <div asp-validation-summary="All" class="text-danger"></div>
+      
+      <div class="form-group">
+        <label>Nome:</label>
+        <input type="text" asp-for="Nome" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>Livro/Curso:</label>
+        <input type="text" asp-for="Bibligrafia" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label>Unidade/Capítulo atual:</label>
+        <input type="text" asp-for="Unidade" class="form-control"/>
+      </div>
+      
+      <div class="form-group">
+        <label>Descricao:</label>
+        <input type="text" asp-for="Descricao" class="form-control"/>
+      </div>
+      
+      <div class="form-group">
+        <label>Prioridade</label>
+        <input type="range" min="-2" max="2" step="1" list="ticks"
+               asp-for="Prioridade" value="0" id="prioridade"/>
+        <datalist id="ticks">
+          @foreach (int i in new[] {-2, -1, 0, 1, 2}) {
+            <option value="@i">@i</option>
+          }
+        </datalist>
+      </div>
+      <div>
+        <input type="submit" class="btn btn-dark" value="Adicionar" name="confirmUpdate"/>
+      </div>
+    </form>
+  </div>
+</div>

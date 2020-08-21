@@ -1,0 +1,36 @@
+@model IEnumerable<Tarefa>
+
+<div class="d-flex flex-row flex-wrap p-0">
+  @foreach (Tarefa t in Model) {
+    <div class="card border border-secondary m-2 p-0 shadow" style="width: 25rem;">
+      <div class="card-body">
+        <div class="bg-light border border-secondary rounded p-3 mb-3">
+          <h5 class="card-title">@t.Nome</h5>
+          <hr/>
+          <div class="mb-1">
+            <i class="fa fa-exclamation-circle"></i>
+            <span class="card-subtitle font-weight-bold @NivelPrioridade.CssClass(t.Prioridade)">
+              Prioridade: @NivelPrioridade.FromValue(t.Prioridade)
+            </span>
+          </div>
+          <div>
+            <i class="fa fa-address-book"></i>
+            <span class="card-subtitle font-weight-bold">Livro/Curso: @t.Bibligrafia</span>
+          </div>
+          <div class="mb-1">
+            <i class="fa fa-book-reader"></i>
+            <span class="card-subtitle font-weight-bold">Unidade/Capítulo: @t.Unidade</span>
+          </div>
+          <div class="mb-1">
+            <i class="fa fa-clock"></i>
+            <span class="card-subtitle font-weight-bold">Horas estudadas: @t.FHorasEstudadas</span>
+          </div>
+          <p class="card-text text-justify">@t.Descricao</p>
+        </div>
+        <div>
+            <partial name="Delete" model="t"/>
+        </div>
+      </div>
+    </div>
+  }
+</div>
