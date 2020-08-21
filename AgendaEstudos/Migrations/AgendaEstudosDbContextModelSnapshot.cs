@@ -29,7 +29,7 @@ namespace AgendaEstudos.Migrations
                     b.Property<DateTime>("CriadaEm")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime(6)")
-                        .HasDefaultValue(new DateTime(2020, 8, 20, 8, 35, 39, 456, DateTimeKind.Local).AddTicks(2232));
+                        .HasDefaultValue(new DateTime(2020, 8, 21, 18, 48, 36, 477, DateTimeKind.Local).AddTicks(3337));
 
                     b.Property<string>("Descricao")
                         .HasColumnType("TEXT");
@@ -37,12 +37,15 @@ namespace AgendaEstudos.Migrations
                     b.Property<double>("HorasEstudadas")
                         .HasColumnType("double");
 
+                    b.Property<double>("MetaHoras")
+                        .HasColumnType("double");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<int>("Prioridade")
-                        .HasColumnType("int");
+                    b.Property<double>("Prioridade")
+                        .HasColumnType("double");
 
                     b.Property<string>("Unidade")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");

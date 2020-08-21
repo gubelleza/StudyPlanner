@@ -7,8 +7,12 @@
       
       <div asp-validation-summary="All" class="text-danger"></div>
       
+      @* TODO: refatorar -> atualizar apenas campos modificados *@
       <input type="hidden" value="@Model.TarefaID" asp-for="TarefaID"/>
       <input type="hidden" value="@Model.Nome" asp-for="Nome"/>
+      <input type="hidden" value="@Model.HorasEstudadas" asp-for="HorasEstudadas"/>
+      <input type="hidden" value="@Model.MetaHoras" asp-for="MetaHoras"/>
+      <input type="hidden" value="@Model.CriadaEm" asp-for="CriadaEm"/>
       
       <div class="form-group">
         <label>Livro/Curso:</label>
@@ -26,13 +30,15 @@
       </div>
         
       <div class="form-group">
-       <label>Prioridade</label>
-        <input type="range" min="-2" max="2" step="1" list="ticks"
-               asp-for="Prioridade" value="0" id="prioridade"/>
+        <label>Prioridade</label>
+        <input type="range" min="@Prioridades.Minima.Value" max="@Prioridades.Maxima.Value" step="0.5" 
+               list="ticks" asp-for="Prioridade" value="@Model.Prioridade" id="prioridade"/>
         <datalist id="ticks">
-          @foreach (int i in new[] {-2, -1, 0, 1, 2}) {
-            <option value="@i">@i</option>
-          }
+          <option value="@Prioridades.Minima.Value"/>
+          <option value="@Prioridades.Baixa.Value"/>
+          <option value="@Prioridades.Normal.Value"/>
+          <option value="@Prioridades.Alta.Value"/>
+          <option value="@Prioridades.Maxima.Value"/>
         </datalist>
       </div>
       <div>

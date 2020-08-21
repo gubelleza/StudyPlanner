@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace AgendaEstudos.Models {
@@ -5,6 +6,12 @@ namespace AgendaEstudos.Models {
         
         public IEnumerable<Tarefa> Tarefas { get; set; }
         public double HorasTotais { get; set; }
-        public double HorasTotaisFator { get; set; }
+        public double MetaGeral { get; set; }        
+        
+        public string FHorasTotais
+            => TimeSpan.FromHours(HorasTotais).ToString(@"hh\:mm\:ss");
+        
+        public string FMetaGeral => 
+            $"{(int) MetaGeral}:{60 * (MetaGeral - (int)MetaGeral):00}";
     }
 }

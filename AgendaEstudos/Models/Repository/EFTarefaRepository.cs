@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace AgendaEstudos.Models.Repository {
     public class EFTarefaRepository : ITarefaRepository {
@@ -25,15 +26,37 @@ namespace AgendaEstudos.Models.Repository {
             _context.SaveChanges();
         }
 
+        public void Atualizar(IEnumerable<Tarefa> tarefas) {
+            _context.Tarefas.UpdateRange(tarefas);
+            _context.SaveChanges();
+        }
+
         public IEnumerable<Tarefa> ListarTarefas() {
             return _context.Tarefas;
         }
 
         public void DeletarTarefa(Tarefa tarefa) {
-            Console.WriteLine("Deletando:" + tarefa);
             _context.Tarefas.Remove(tarefa);
             _context.SaveChanges();
+        }
 
+        public void DeletarTarefas(IEnumerable<Tarefa> tarefas) {
+            _context.Tarefas.RemoveRange(tarefas);
+            _context.SaveChanges();
+        }
+        
+        public void ReiniciarHorasEstudadas(IEnumerable<Tarefa> tarefas) {
+            var enumerable = tarefas.ToList();
+            foreach (var t in enumerable) {
+                t.HorasEstudadas = 0;
+            }
+            _context.Tarefas.UpdateRange(enumerable);
+            _context.SaveChanges();
+        }
+        public void ReiniciarHorasEstudadas(Tarefa tarefa) {
+            tarefa.HorasEstudadas = 0;
+            _context.Tarefas.Update(tarefa);
+            _context.SaveChanges();
         }
     }
 }

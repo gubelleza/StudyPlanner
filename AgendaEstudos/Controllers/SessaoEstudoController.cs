@@ -22,19 +22,10 @@ namespace AgendaEstudos.Controllers {
         public IActionResult ConcluirSessao(SessaoEstudoViewModel sessaoEstudo) {
             sessaoEstudo.HorarioFim = DateTime.Now;
             
-            Console.WriteLine("SessaoEstudo: " + sessaoEstudo);
-            
             Tarefa tarefa = _repository.GetById(sessaoEstudo.Tarefa.TarefaID);
-            
-            Console.WriteLine("Tarefa antes: " + tarefa);
-
             tarefa.HorasEstudadas += sessaoEstudo.DuracaoSessao;
-            
-            Console.WriteLine("Tarefa depois: " + tarefa);
-
-            
             _repository.Atualizar(tarefa);
-
+            
             return Redirect("/tarefas/listar");
         }
     }
