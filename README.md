@@ -23,7 +23,7 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/>
     <li>
     <strong>Lista das tarefas</strong> criadas e suas características. Bem como botões
     com a opção de Iniciar uma Sessao de Estudo, Deletar e Editar a tarefa.
-    <img src="/dev/AgendaEstudos/docs/imgs/CardTarefa.png"/>
+    ![card image](https://github.com/gubelleza/StudyPlanner/blob/dev/CardTarefa.png)
     </li>
     <li>
     <strong>Sessões de estudo</strong> iniciadas e concluídas pelo usuário, que contabilizam
@@ -40,13 +40,13 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/>
             entre as diversas tarefas, considerando como peso o grau de prioridade de 
             cada tarefa. Ex:              
             <pre><strong>/AgendaEstudos/Services/StatsService.cs</strong>
-            <br>public void AtribuirMetasProporcionais(double meta) {
+            <br>```public void AtribuirMetasProporcionais(double meta) {
                 double unidadeComumHoras = meta / TotalFatorPrioridade;            
                 foreach (Tarefa t in Tarefas) {
                     t.MetaHoras = t.Prioridade * unidadeComumHoras;
                     Console.WriteLine("Meta: " + t.MetaHoras);
                 }
-            }
+            ```}
             </pre>                        
         </li>
         </ul>   
