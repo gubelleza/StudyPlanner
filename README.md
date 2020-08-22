@@ -5,11 +5,11 @@ C# | ASP.NET Core | Planejador Rápido de Estudos
 <span>
 &nbsp; &nbsp; Este projeto está sendo desenvolvido com o objetivo primário de estudo
 e treinamento nas ferramentas da plataforma <strong>.NET Core.</strong>
-<br/>
+<br/><br/>
 &nbsp; &nbsp; As ferramentas aqui utilizadas são aquelas que satisfazem às necessidades
 de uma aplicação web, como: <strong>ASP.NET Core MVC, Entity Framework Core e C#</strong>,
 como linguagem da plataforma .NET. 
-<br/>
+<br/><br/>
 &nbsp; &nbsp; Apesar do intuito didático, o StudyPlanner pretende oferecer uma funcionalidade
 principal: utilizar algoritmos para organizar de forma automatizada uma rotina 
 de estudos, retirando do estudando a carga cognitiva do planejamento.<br/>
@@ -23,7 +23,7 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/>
     <li>
     <strong>Lista das tarefas</strong> criadas e suas características. Bem como botões
     com a opção de Iniciar uma Sessao de Estudo, Deletar e Editar a tarefa.
-    <img src="docs/imgs/CardTarefa.png" alt=""/>
+    <img src="gubelleza/StudyPlanner/blob/dev/AgendaEstudos/docs/imgs/CardTarefa.png"/>
     </li>
     <li>
     <strong>Sessões de estudo</strong> iniciadas e concluídas pelo usuário, que contabilizam
