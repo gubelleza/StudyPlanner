@@ -12,18 +12,16 @@ como linguagem da plataforma .NET.
 <br/><br/>
 &nbsp; &nbsp; Apesar do intuito didático, o StudyPlanner pretende oferecer uma funcionalidade
 principal: utilizar algoritmos para organizar de forma automatizada uma rotina 
-de estudos, retirando do estudando a carga cognitiva do planejamento.<br/>
+de estudos, retirando do estudando a carga cognitiva do planejamento.<br/><br/>
 </span>
 &nbsp; &nbsp; No estado atual, a aplicação possui as seguintes funcionalidades:
 
 <strong>Criação de tarefas</strong> de estudo contendo Nome, Unidade/Capítulo atual, grau de prioridade de
 1 a 3 (passos de 0,5), Meta de horas de estudo e uma Descrição opcional.
 
-
 <strong>Lista das tarefas</strong> criadas e suas características. Bem como botões
 com a opção de Iniciar uma Sessao de Estudo, Deletar e Editar a tarefa.<br/>
-![alt text](https://github.com/gubelleza/StudyPlanner/blob/dev/CardTarefa.png?raw=true)
-
+![alt text](https://github.com/gubelleza/StudyPlanner/blob/dev/AgendaEstudos/docs/imgs/CardTarefa.png)
 
 <strong>Sessões de estudo</strong> iniciadas e concluídas pelo usuário, que contabilizam
 as horas estudadas para uma determinada tarefa.
@@ -31,6 +29,7 @@ as horas estudadas para uma determinada tarefa.
 <strong>Administrar a Rotina de Estudos</strong>, permitindo ao usuário atuar sobre 
 todas as tarefas existentes realizando as operações: Reiniciar, Deletar e Estabelecer
 uma meta para todas as tarefas registradas.
+
 <strong>A funcionalidade de Estabelecer uma Meta</strong> para todas as tarefas conta com um
 algoritmo que realiza a divisão proporcional da meta de horas geral inserida
 entre as diversas tarefas, considerando como peso o grau de prioridade de 
