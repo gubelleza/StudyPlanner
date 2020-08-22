@@ -23,7 +23,7 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/><br/>
 com a opção de Iniciar uma Sessao de Estudo, Deletar e Editar a tarefa.<br/>
 Exemplo:<br/>
 
-![alt text](https://github.com/gubelleza/StudyPlanner/blob/dev/AgendaEstudos/docs/imgs/CardTarefa.png | width=200)
+![alt text](https://github.com/gubelleza/StudyPlanner/blob/dev/AgendaEstudos/docs/imgs/CardTarefa.png)
 
 <strong>Sessões de estudo</strong> iniciadas e concluídas pelo usuário, que contabilizam
 as horas estudadas para uma determinada tarefa.
