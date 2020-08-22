@@ -57,13 +57,20 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/><br/>
 ```C#
     // file: StudyPlanner/AgendaEstudos/Services/StatsService.cs
     
-    public void AtribuirMetasProporcionais(double meta) {
-        double unidadeComumHoras = meta / TotalFatorPrioridade;            
-        foreach (Tarefa t in Tarefas) {
-            t.MetaHoras = t.Prioridade * unidadeComumHoras;
-            Console.WriteLine("Meta: " + t.MetaHoras);
+    public class StatsService : IStatsService {
+    
+        public double TotalFatorPrioridade 
+            => Tarefas.Sum(t => t.Prioridade);
+            
+        // (...)
+        
+        public void AtribuirMetasProporcionais(double meta) {
+            double unidadeComumHoras = meta / TotalFatorPrioridade;            
+            foreach (Tarefa t in Tarefas) {
+                t.MetaHoras = t.Prioridade * unidadeComumHoras;
+            }
         }
-    }     
+    }
 ``` 
 
 <div>
