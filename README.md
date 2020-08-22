@@ -21,7 +21,9 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/><br/>
 
 <strong>Lista das tarefas</strong> criadas e suas características. Bem como botões
 com a opção de Iniciar uma Sessao de Estudo, Deletar e Editar a tarefa.<br/>
-![alt text](https://github.com/gubelleza/StudyPlanner/blob/dev/AgendaEstudos/docs/imgs/CardTarefa.png)
+Exemplo:<br/>
+
+![alt text](https://github.com/gubelleza/StudyPlanner/blob/dev/AgendaEstudos/docs/imgs/CardTarefa.png | width=200)
 
 <strong>Sessões de estudo</strong> iniciadas e concluídas pelo usuário, que contabilizam
 as horas estudadas para uma determinada tarefa.
@@ -36,6 +38,8 @@ entre as diversas tarefas, considerando como peso o grau de prioridade de
 cada tarefa.     
 
 ```C#
+    // file: StudyPlanner/AgendaEstudos/Services/StatsService.cs
+    
     public void AtribuirMetasProporcionais(double meta) {
         double unidadeComumHoras = meta / TotalFatorPrioridade;            
         foreach (Tarefa t in Tarefas) {
