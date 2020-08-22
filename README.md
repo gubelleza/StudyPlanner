@@ -16,11 +16,13 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/><br/>
 </span>
 <div>
     No estado atual, a aplicação possui as seguintes funcionalidades:
+    <br>
 </div>
 <div>
     &nbsp; &nbsp; <strong>1.</strong> Criação de tarefas de estudo contendo Nome, Unidade/Capítulo atual, grau de prioridade de
     1 a 3 (passos de 0,5), Meta de horas de estudo e uma Descrição opcional.
-    </div>
+    <br>
+</div>
 <div>
     &nbsp; &nbsp; <strong>2.</strong> Lista das tarefascriadas e suas características. Bem como botões
     com a opção de Iniciar uma Sessao de Estudo, Deletar e Editar a tarefa.<br/>
@@ -31,17 +33,20 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/><br/>
 <div>
     &nbsp; &nbsp; <strong>3.</strong> Sessões de estudo iniciadas e concluídas pelo usuário, que contabilizam
     as horas estudadas para uma determinada tarefa.
+    <br>
 </div>
 <div>
     &nbsp; &nbsp; <strong>4.</strong> Administrar a Rotina de Estudos, permitindo ao usuário atuar sobre 
     todas as tarefas existentes realizando as operações: Reiniciar, Deletar e Estabelecer
     uma meta para todas as tarefas registradas.
+    <br>
 </div>
 <div>
     &nbsp; &nbsp; <strong>5.</strong> A funcionalidade de Estabelecer uma Meta para todas as tarefas conta com um
     algoritmo que realiza a divisão proporcional da meta de horas geral inserida
     entre as diversas tarefas, considerando como peso o grau de prioridade de 
     cada tarefa.  
+    <br>
 </div>
 
 ```C#
@@ -60,6 +65,7 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/><br/>
     &nbsp; &nbsp; <strong>6.</strong> Visualizar as Estatísticas relativas aos estudos, considerando as
     proporções das horas investidas nas tarefas, em relação às horas totais estudadas,
     bem como em relação às metas de cada tarefa.
+    <br>
 </div>
 
 <h2>Próximos Passos:</h2>
