@@ -28,7 +28,7 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/><br/>
 <div>
     &nbsp; &nbsp; <strong>2.</strong> Lista das tarefascriadas e suas características. Bem como botões
     com a opção de Iniciar uma Sessao de Estudo, Deletar e Editar a tarefa.
-    Exemplo:<br/>
+    Exemplo:<br/><br/>
     <img src="https://github.com/gubelleza/StudyPlanner/blob/dev/AgendaEstudos/docs/imgs/CardTarefa.png" width="300">
     <br/><br/>
 </div>
