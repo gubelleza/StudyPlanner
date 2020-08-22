@@ -70,6 +70,33 @@
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </Content>
+      <Content Update="Views\Shared\_ValidationScriptsPartial.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\css\bootstrap-grid.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\css\bootstrap-grid.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\css\bootstrap-grid.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\css\bootstrap-grid.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\css\bootstrap-reboot.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\css\bootstrap-reboot.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\css\bootstrap-reboot.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\css\bootstrap-reboot.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\css\bootstrap.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\css\bootstrap.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\css\bootstrap.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\css\bootstrap.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\js\bootstrap.bundle.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\js\bootstrap.bundle.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\js\bootstrap.bundle.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\js\bootstrap.bundle.min.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\js\bootstrap.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\js\bootstrap.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\js\bootstrap.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\js\bootstrap.min.js.map" />
     </ItemGroup>
 
 </Project>

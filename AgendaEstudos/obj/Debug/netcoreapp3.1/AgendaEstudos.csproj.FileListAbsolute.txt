@@ -145,3 +145,4 @@
 /home/gustavo/Documents/Repositorios/StudyPlanner/AgendaEstudos/obj/Debug/netcoreapp3.1/AgendaEstudos.pdb
 /home/gustavo/Documents/Repositorios/StudyPlanner/AgendaEstudos/obj/Debug/netcoreapp3.1/AgendaEstudos.genruntimeconfig.cache
 /home/gustavo/Documents/Repositorios/StudyPlanner/AgendaEstudos/obj/Debug/netcoreapp3.1/Razor/Views/Admin/Index.cshtml.g.cs
+/home/gustavo/Documents/Repositorios/StudyPlanner/AgendaEstudos/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
