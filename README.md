@@ -23,7 +23,7 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/>
     <li>
     <strong>Lista das tarefas</strong> criadas e suas características. Bem como botões
     com a opção de Iniciar uma Sessao de Estudo, Deletar e Editar a tarefa.
-    <img src="gubelleza/StudyPlanner/blob/dev/AgendaEstudos/docs/imgs/CardTarefa.png"/>
+    <img src="/dev/AgendaEstudos/docs/imgs/CardTarefa.png"/>
     </li>
     <li>
     <strong>Sessões de estudo</strong> iniciadas e concluídas pelo usuário, que contabilizam
