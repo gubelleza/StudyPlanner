@@ -46,9 +46,7 @@ namespace AgendaEstudos.Services {
 
         public void AtribuirMetasProporcionais(double meta) {
             double unidadeComumHoras = meta / TotalFatorPrioridade;
-            Console.WriteLine("Meta: " + meta);
-            Console.WriteLine("Fator: " +  TotalFatorPrioridade);
-            Console.WriteLine("unidadeComumHoras :" +  unidadeComumHoras);
+
             foreach (Tarefa t in Tarefas) {
                 t.MetaHoras = t.Prioridade * unidadeComumHoras;
                 Console.WriteLine("Meta: " + t.MetaHoras);
