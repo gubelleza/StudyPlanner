@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using AgendaEstudos.Models;
 using System.Linq;
 using AgendaEstudos.Models.Repository;
-using Chart.Mvc.Core.SimpleChart.Pie;
 
 namespace AgendaEstudos.Services {
     public class StatsService : IStatsService {

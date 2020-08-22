@@ -1,15 +1,14 @@
 @model Tarefa
 
 <div class="container">
-  <div>Criar Tarefa</div>
+  <h2>Criar Tarefa</h2>
   <div>
     <form asp-action="CriarTarefa" method="post" 
           onsubmit="confirmUpdate.disabled=true; confirmUpdate.value='Aguarde'; return true;">
       
-      <div asp-validation-summary="All" class="text-danger"></div>
-      
       <div class="form-group">
         <label>Nome:</label>
+        <span asp-validation-for="Nome" class="text-danger"></span>
         <input type="text" asp-for="Nome" class="form-control"/>
       </div>
 
@@ -29,9 +28,12 @@
       </div>
       
       <div class="form-group">
-        <label>Prioridade</label>
-        <input type="range" min="@Prioridades.Minima.Value" max="@Prioridades.Maxima.Value" step="0.5" 
-               list="ticks" asp-for="Prioridade" value="@Prioridades.Normal.Value" id="prioridade"/>
+        <div>
+          <label>Prioridade: </label>
+          <span id="outPrioridade" class="text-dark"></span>
+        </div>
+        <input type="range" min="@Prioridades.Minima.Value" max="@Prioridades.Maxima.Value" step="0.5"
+               list="ticks" asp-for="Prioridade" value="@Prioridades.Normal.Value" id="inputPrioridade"/>
         <datalist id="ticks">
           <option value="@Prioridades.Minima.Value"/>
           <option value="@Prioridades.Baixa.Value"/>
@@ -46,3 +48,6 @@
     </form>
   </div>
 </div>
+@section Scripts {
+  @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); };
+}
