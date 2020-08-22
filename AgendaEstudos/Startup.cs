@@ -1,5 +1,6 @@
 using AgendaEstudos.Models;
 using AgendaEstudos.Models.Repository;
+using AgendaEstudos.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,7 @@ namespace AgendaEstudos
                 opts.UseMySql(Configuration.GetConnectionString("AgendaEstudosConnection"));
             });
             services.AddScoped<ITarefaRepository, EFTarefaRepository>();
+            services.AddScoped<IStatsService, StatsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

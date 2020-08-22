@@ -17,8 +17,8 @@ namespace AgendaEstudos.Controllers {
         [HttpGet]
         public ViewResult Listar()
             => View(_repository.ListarTarefas()
-                .OrderByDescending(t => t.Prioridade)
-                .ThenBy(t => t.HorasEstudadas)
+                .OrderBy(t =>Math.Round(t.HorasEstudadas/t.MetaHoras))
+                .ThenByDescending(t => t.Prioridade)
             );
         
         // ----- [Criar Tarefas]

@@ -1,46 +1,73 @@
-namespace AgendaEstudos.Models {
-    public enum Prioridade {
-        Minima = -2, 
-        Baixa, 
-        Normal, 
-        Alta, 
-        Maxima 
-    }
+using System;
 
-    public class NivelPrioridade {
-            
-        public static Prioridade FromValue(int valPrioridade) {
-            switch (valPrioridade) {
-                case -2:
-                    return Prioridade.Minima;
-                case -1:
-                    return Prioridade.Baixa;
-                case 0:
-                    return Prioridade.Normal;
-                case 1:
-                    return Prioridade.Alta;
-                case 2:
-                    return Prioridade.Maxima;
-                default:
-                    return Prioridade.Normal;
-            }
+#nullable enable
+namespace AgendaEstudos.Models {
+    public class Prioridades : IEquatable<Prioridades> {
+        private static readonly double TOLERANCE = 0.01;
+        
+        public string Name { get; }
+        public double Value { get; }
+        public string CssClass { get; }
+        
+        public static readonly Prioridades Minima = 
+            new Prioridades(1, "Minima", "text-success");
+        
+        public static readonly Prioridades Baixa = 
+            new Prioridades(1.5, "Baixa", "text-info");
+        
+        public static readonly Prioridades Normal = 
+            new Prioridades(2.0, "Normal", "text-dark");
+        
+        public static readonly Prioridades Alta = 
+            new Prioridades(2.5, "Alta", "text-warning");
+        
+        public static readonly Prioridades Maxima = 
+            new Prioridades(3.0, "Maxima", "text-danger");
+
+        public Prioridades(double value, string name, string cssClass) {
+            Value = value;
+            Name = name;
+            CssClass = cssClass;
         }
 
-        public static string CssClass(int valPrioridade) {
-            switch (valPrioridade) {
-                case -2:
-                    return "text-success";
-                case -1:
-                    return "text-info";
-                case 0:
-                    return "text-dark";
-                case 1:
-                    return "text-warning";
-                case 2:
-                    return "text-danger";
-                default:
-                    return "text-dark";
-            }
+        public static Prioridades FromVal(double val) {
+            Console.WriteLine(">>> " + val);
+            if (val.Equals(Minima.Value)) return Minima;
+            if (Math.Abs(val - Baixa.Value) < TOLERANCE) return Baixa;
+            if (Math.Abs(val - Normal.Value) < TOLERANCE) return Normal;
+            if (Math.Abs(val - Alta.Value) < TOLERANCE) return Alta;
+            if (Math.Abs(val - Maxima.Value) < TOLERANCE) return Maxima;
+
+            return Normal;
+        }
+        
+        public override bool Equals(object? obj) {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != typeof(Prioridades)) return false;
+            return Equals((Prioridades) obj);
+        }
+
+        public bool Equals(Prioridades? other) {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return Name == other.Name && (Math.Abs(Value - other.Value) < TOLERANCE);
+        }
+        
+        public bool Equals(double other) {
+            return (Math.Abs(Value - other) < TOLERANCE);
+        }
+
+        public override int GetHashCode() {
+            return HashCode.Combine(Name, Value);
+        }
+
+        public static bool operator ==(Prioridades? left, Prioridades? right) {
+            return Equals(left, right);
+        }
+
+        public static bool operator !=(Prioridades? left, Prioridades? right) {
+            return !Equals(left, right);
         }
     }
 }

@@ -17,36 +17,32 @@ namespace AgendaEstudos.Models {
         [Column(TypeName = "TEXT")]
         public string Descricao { get; set; }
         
-        public int Prioridade { get; set; }
+        public double Prioridade { get; set; }
         
         [Required(ErrorMessage = "Campo obrigatório!")]
         public double HorasEstudadas { get; set; }
+
+        public double MetaHoras { get; set; } = 0;
 
         public DateTime CriadaEm { get; set; }
         
         [NotMapped]
         public string FHorasEstudadas 
             => TimeSpan.FromHours(HorasEstudadas).ToString(@"hh\:mm\:ss");
+                
+        [NotMapped]
+        public string FHorasEstudadasPonderadas
+            => TimeSpan.FromHours(HorasEstudadasPonderadas).ToString(@"hh\:mm\:ss");
+                
+        [NotMapped]
+        public string FMetaHoras
+            => TimeSpan.FromHours(MetaHoras).ToString(@"hh\:mm\:ss");
+        [NotMapped]
+        public double HorasEstudadasPonderadas { get; set; }
+
         
         public override string ToString() {
             return $"Tarefa(ID: {TarefaID} Nome: {Nome})";
-        }
-
-        public double HorasEstudadasCorrigidas() {
-            switch (Prioridade) {
-                case -2:
-                    return HorasEstudadas * 1.75;
-                case -1:
-                    return HorasEstudadas * 1.50;
-                case 0:
-                    return HorasEstudadas;
-                case 1:
-                    return HorasEstudadas * 0.75;
-                case 2:
-                    return HorasEstudadas * 0.60;
-                default:
-                    return HorasEstudadas;
-            }
         }
     }
 }

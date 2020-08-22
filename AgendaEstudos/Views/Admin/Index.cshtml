@@ -1,0 +1,50 @@
+@model AdminViewModel
+
+<div class="container w-100 h-100 d-flex flex-column align-items-center m-3">
+  <div class="w-100 d-flex mb-2">
+    <h3>Administrar Tarefas Registradas:</h3>
+  </div>
+  <div class="d-flex flex-column flex-wrap w-75 jumbotron shadow p-3 align-content-center m-0" style="height: 45vh">
+    @foreach (var t in @Model.Tarefas) {
+      <span class="m-2 pt-1 pl-2 pb-1 pr-2 bg-dark text-white rounded text-justify" style="width: 40%;">
+        @t.Nome
+      </span>
+    }
+  </div>
+  <div class="w-75 d-flex flex-column align-content-center rounded">
+    <div class="d-flex flex-row justify-content-center p-3">
+      <div class="mr-3">
+        <form asp-action="ReiniciarTodos" as method="post">
+          <input type="submit" class="btn btn-dark" value="Reiniciar Todas" 
+                 onclick="return confirm('Reiniciar as horas estudadas em todas as tarefas?');"/>
+        </form>
+      </div>
+      <div class="ml-3">
+        <form asp-action="DeletarTodos" as method="post">
+          <input type="submit" class="btn btn-dark" value="Deletar Todas" 
+                 onclick="return confirm('Confirmar exclusão de todas as tarefas?');"/>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4 align-self-start">
+    <h3>Meta de Horas de Estudo</h3>
+    <p class="text-justify">
+      Selecione uma meta de horas a serem estudadas para que a<br/>
+      aplicação divida essas horas pelos assuntos de acordo com <br/>
+      a prioridade de cada um.
+    </p>
+    <form asp-action="AtribuirMetas" as method="post">
+      <div class="d-flex flex-column">
+        <div class="form-group d-flex align-items-center">
+          <label class="mr-3 pt-2">Sua meta:</label>
+          <input type="number" min="0" step="0.5" asp-for="Meta"
+                 class="bg-secondary text-white form-control border border-dark" style="width: 5vw;"/>
+          <input type="submit" class="btn btn-dark ml-3" value="Confirmar"/>
+
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+

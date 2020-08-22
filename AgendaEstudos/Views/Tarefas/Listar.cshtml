@@ -9,8 +9,8 @@
           <hr/>
           <div class="mb-1">
             <i class="fa fa-exclamation-circle"></i>
-            <span class="card-subtitle font-weight-bold @NivelPrioridade.CssClass(t.Prioridade)">
-              Prioridade: @NivelPrioridade.FromValue(t.Prioridade)
+            <span class="card-subtitle font-weight-bold @Prioridades.FromVal(t.Prioridade).CssClass">
+              Prioridade: @Prioridades.FromVal(t.Prioridade).Name
             </span>
           </div>
           <div>
@@ -24,6 +24,10 @@
           <div class="mb-1">
             <i class="fa fa-clock"></i>
             <span class="card-subtitle font-weight-bold">Horas estudadas: @t.FHorasEstudadas</span>
+          </div>
+          <div class="mb-1">
+            <i class="fa fa-award"></i>
+            <span class="card-subtitle font-weight-bold">Meta: @t.FMetaHoras</span>
           </div>
           <p class="card-text text-justify">@t.Descricao</p>
         </div>

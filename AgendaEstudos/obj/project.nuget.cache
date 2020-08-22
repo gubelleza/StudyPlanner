@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Brgj9U5gUb+atahXoa+ofpD7xpmJCa+xx3cVkvXmCNijATXcT0nHTvo2WUemVw/61xHebEVtIUx7eRcJMAsTHQ==",
+  "dgSpecHash": "7mQRwvSbzTBRFbCGpXxehXWhyT283kqNgLj20mkNkWIM6CbYg/MQilb+TqYf+9Ewirv5qDv83W/GYFMcYajpqA==",
   "success": true,
-  "projectFilePath": "/home/gustavo/Documents/DotNetCore/AspNetCore/AgendaEstudos/AgendaEstudos/AgendaEstudos.csproj",
+  "projectFilePath": "/home/gustavo/Documents/Repositorios/StudyPlanner/AgendaEstudos/AgendaEstudos.csproj",
   "expectedPackageFiles": [
     "/home/gustavo/.nuget/packages/castle.core/4.4.0/castle.core.4.4.0.nupkg.sha512",
     "/home/gustavo/.nuget/packages/chart.mvc.core/1.1.0/chart.mvc.core.1.1.0.nupkg.sha512",
