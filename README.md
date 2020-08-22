@@ -41,15 +41,15 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/>
             cada tarefa. Ex:              
             <br><strong>/AgendaEstudos/Services/StatsService.cs</strong>
             <br>
-            ```C#
-            public void AtribuirMetasProporcionais(double meta) {
-                double unidadeComumHoras = meta / TotalFatorPrioridade;            
-                foreach (Tarefa t in Tarefas) {
-                    t.MetaHoras = t.Prioridade * unidadeComumHoras;
-                    Console.WriteLine("Meta: " + t.MetaHoras);
-                }
-            }     
-            ```
+                ```C#
+                public void AtribuirMetasProporcionais(double meta) {
+                    double unidadeComumHoras = meta / TotalFatorPrioridade;            
+                    foreach (Tarefa t in Tarefas) {
+                        t.MetaHoras = t.Prioridade * unidadeComumHoras;
+                        Console.WriteLine("Meta: " + t.MetaHoras);
+                    }
+                }     
+                ```
         </li>
         </ul>   
     </li>
