@@ -43,6 +43,7 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/><br/>
     &nbsp; &nbsp; entre as diversas tarefas, considerando como peso o grau de prioridade de 
     &nbsp; &nbsp; cada tarefa.  
 </div>
+
 ```C#
     // file: StudyPlanner/AgendaEstudos/Services/StatsService.cs
     
@@ -54,6 +55,7 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/><br/>
         }
     }     
 ``` 
+
 <div>
     &nbsp; &nbsp; <strong>6.</strong> Visualizar as Estatísticas relativas aos estudos, considerando as
     &nbsp; &nbsp; proporções das horas investidas nas tarefas, em relação às horas totais estudadas,
