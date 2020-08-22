@@ -38,21 +38,8 @@ de estudos, retirando do estudando a carga cognitiva do planejamento.<br/>
             <strong>A funcionalidade de Estabelecer uma Meta</strong> para todas as tarefas conta com um
             algoritmo que realiza a divisão proporcional da meta de horas geral inserida
             entre as diversas tarefas, considerando como peso o grau de prioridade de 
-            cada tarefa. Ex:              
-            <br><strong>/AgendaEstudos/Services/StatsService.cs</strong>
-            <br>
-            <pre>
-            ```C#
-            public void AtribuirMetasProporcionais(double meta) {
-                double unidadeComumHoras = meta / TotalFatorPrioridade;            
-                foreach (Tarefa t in Tarefas) {
-                    t.MetaHoras = t.Prioridade * unidadeComumHoras;
-                    Console.WriteLine("Meta: " + t.MetaHoras);
-                }
-            }     
-            ```
-            </pre>
-        </li>
+            cada tarefa.           
+       </li>
         </ul>   
     </li>
     <li>
@@ -87,3 +74,13 @@ Gustavo Coelho Belleza Dias<br>
 dias.gcb@gmail.com
 </small>
 </footer>
+
+```C#
+public void AtribuirMetasProporcionais(double meta) {
+    double unidadeComumHoras = meta / TotalFatorPrioridade;            
+    foreach (Tarefa t in Tarefas) {
+        t.MetaHoras = t.Prioridade * unidadeComumHoras;
+        Console.WriteLine("Meta: " + t.MetaHoras);
+    }
+}     
+``` 
