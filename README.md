@@ -14,31 +14,35 @@ Apesar do intuito didático, o StudyPlanner pretende oferecer uma funcionalidade
 principal: utilizar algoritmos para organizar de forma automatizada uma rotina 
 de estudos, retirando do estudando a carga cognitiva do planejamento.<br/><br/>
 </span>
-&nbsp; &nbsp; No estado atual, a aplicação possui as seguintes funcionalidades:
 <div>
-&nbsp; &nbsp; <strong>1.</strong> Criação de tarefas de estudo contendo Nome, Unidade/Capítulo atual, grau de prioridade de
-&nbsp; &nbsp; 1 a 3 (passos de 0,5), Meta de horas de estudo e uma Descrição opcional.
+    No estado atual, a aplicação possui as seguintes funcionalidades:
 </div>
 <div>
-&nbsp; &nbsp; <strong>2</strong>Lista das tarefascriadas e suas características. Bem como botões
-&nbsp; &nbsp;com a opção de Iniciar uma Sessao de Estudo, Deletar e Editar a tarefa.<br/>
-&nbsp; &nbsp;Exemplo:
-<img src="https://github.com/gubelleza/StudyPlanner/blob/dev/AgendaEstudos/docs/imgs/CardTarefa.png" width="300">
+    &nbsp; &nbsp; <strong>1.</strong> Criação de tarefas de estudo contendo Nome, Unidade/Capítulo atual, grau de prioridade de
+    &nbsp; &nbsp; 1 a 3 (passos de 0,5), Meta de horas de estudo e uma Descrição opcional.
+    </div>
+<div>
+    &nbsp; &nbsp; <strong>2.</strong> Lista das tarefascriadas e suas características. Bem como botões
+    &nbsp; &nbsp;com a opção de Iniciar uma Sessao de Estudo, Deletar e Editar a tarefa.<br/>
+    &nbsp; &nbsp;Exemplo:<br/>
+    <img src="https://github.com/gubelleza/StudyPlanner/blob/dev/AgendaEstudos/docs/imgs/CardTarefa.png" width="300">
+    <br/>
 </div>
-
-
-<strong>Sessões de estudo</strong> iniciadas e concluídas pelo usuário, que contabilizam
-as horas estudadas para uma determinada tarefa.
-
-<strong>Administrar a Rotina de Estudos</strong>, permitindo ao usuário atuar sobre 
-todas as tarefas existentes realizando as operações: Reiniciar, Deletar e Estabelecer
-uma meta para todas as tarefas registradas.
-
-<strong>A funcionalidade de Estabelecer uma Meta</strong> para todas as tarefas conta com um
-algoritmo que realiza a divisão proporcional da meta de horas geral inserida
-entre as diversas tarefas, considerando como peso o grau de prioridade de 
-cada tarefa.     
-
+<div>
+    &nbsp; &nbsp; <strong>3.</strong> Sessões de estudo iniciadas e concluídas pelo usuário, que contabilizam
+    &nbsp; &nbsp;as horas estudadas para uma determinada tarefa.
+</div>
+<div>
+    &nbsp; &nbsp; <strong>4.</strong> Administrar a Rotina de Estudos, permitindo ao usuário atuar sobre 
+    &nbsp; &nbsp; todas as tarefas existentes realizando as operações: Reiniciar, Deletar e Estabelecer
+    &nbsp; &nbsp; uma meta para todas as tarefas registradas.
+</div>
+<div>
+    &nbsp; &nbsp; <strong>5.</strong> A funcionalidade de Estabelecer uma Meta para todas as tarefas conta com um
+    &nbsp; &nbsp; algoritmo que realiza a divisão proporcional da meta de horas geral inserida
+    &nbsp; &nbsp; entre as diversas tarefas, considerando como peso o grau de prioridade de 
+    &nbsp; &nbsp; cada tarefa.  
+</div>
 ```C#
     // file: StudyPlanner/AgendaEstudos/Services/StatsService.cs
     
@@ -50,9 +54,12 @@ cada tarefa.
         }
     }     
 ``` 
-<strong>Visualizar as Estatísticas</strong> relativas aos estudos, considerando as
-proporções das horas investidas nas tarefas, em relação às horas totais estudadas,
-bem como em relação às metas de cada tarefa.
+<div>
+    &nbsp; &nbsp; <strong>6.</strong> Visualizar as Estatísticas relativas aos estudos, considerando as
+    &nbsp; &nbsp; proporções das horas investidas nas tarefas, em relação às horas totais estudadas,
+    &nbsp; &nbsp; bem como em relação às metas de cada tarefa.
+</div>
+
 
 <h2>Próximos Passos:</h2>
 <span>
