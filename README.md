@@ -3,27 +3,29 @@ C# | ASP.NET Core | Planejador Rápido de Estudos
 <hr>
 <h2>Intenção:</h2>
 <span>
-&nbsp; &nbsp; Este projeto está sendo desenvolvido com o objetivo primário de estudo
+Este projeto está sendo desenvolvido com o objetivo primário de estudo
 e treinamento nas ferramentas da plataforma <strong>.NET Core.</strong>
 <br/><br/>
-&nbsp; &nbsp; As ferramentas aqui utilizadas são aquelas que satisfazem às necessidades
+As ferramentas aqui utilizadas são aquelas que satisfazem às necessidades
 de uma aplicação web, como: <strong>ASP.NET Core MVC, Entity Framework Core e C#</strong>,
 como linguagem da plataforma .NET. 
 <br/><br/>
-&nbsp; &nbsp; Apesar do intuito didático, o StudyPlanner pretende oferecer uma funcionalidade
+Apesar do intuito didático, o StudyPlanner pretende oferecer uma funcionalidade
 principal: utilizar algoritmos para organizar de forma automatizada uma rotina 
 de estudos, retirando do estudando a carga cognitiva do planejamento.<br/><br/>
 </span>
 &nbsp; &nbsp; No estado atual, a aplicação possui as seguintes funcionalidades:
-
-<strong>Criação de tarefas</strong> de estudo contendo Nome, Unidade/Capítulo atual, grau de prioridade de
-1 a 3 (passos de 0,5), Meta de horas de estudo e uma Descrição opcional.
-
-<strong>Lista das tarefas</strong> criadas e suas características. Bem como botões
-com a opção de Iniciar uma Sessao de Estudo, Deletar e Editar a tarefa.<br/>
-Exemplo:<br/>
-
+<div>
+&nbsp; &nbsp; <strong>1.</strong> Criação de tarefas de estudo contendo Nome, Unidade/Capítulo atual, grau de prioridade de
+&nbsp; &nbsp; 1 a 3 (passos de 0,5), Meta de horas de estudo e uma Descrição opcional.
+</div>
+<div>
+&nbsp; &nbsp; <strong>2</strong>Lista das tarefascriadas e suas características. Bem como botões
+&nbsp; &nbsp;com a opção de Iniciar uma Sessao de Estudo, Deletar e Editar a tarefa.<br/>
+&nbsp; &nbsp;Exemplo:
 <img src="https://github.com/gubelleza/StudyPlanner/blob/dev/AgendaEstudos/docs/imgs/CardTarefa.png" width="300">
+</div>
+
 
 <strong>Sessões de estudo</strong> iniciadas e concluídas pelo usuário, que contabilizam
 as horas estudadas para uma determinada tarefa.
