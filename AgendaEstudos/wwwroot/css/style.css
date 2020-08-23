@@ -2,6 +2,6 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-a, label, p, span {
+a, label, p, span, div {
     font-size: calc(0.75em + 1vmin);
 }
