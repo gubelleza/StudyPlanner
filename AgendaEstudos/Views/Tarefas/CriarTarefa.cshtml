@@ -33,6 +33,7 @@
           <label>Prioridade: </label>
           <span id="outPrioridade" class="text-dark"></span>
         </div>
+        
         <input type="range" min="@Prioridades.Minima.Value" max="@Prioridades.Maxima.Value" step="0.5"
                list="ticks" asp-for="Prioridade" value="@Prioridades.Normal.Value" id="inputPrioridade"/>
         <datalist id="ticks">

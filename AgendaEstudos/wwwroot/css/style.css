@@ -3,5 +3,5 @@ body {
 }
 
 a, label, p, span, div {
-    font-size: calc(0.75em + 1vmin);
+    font-size: calc(0.70em + 0.80vmin);
 }
