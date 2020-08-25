@@ -2,32 +2,39 @@
 
 <div class="d-flex flex-row flex-wrap p-0">
   @foreach (Tarefa t in Model) {
-    <div class="card border border-secondary m-2 p-0 shadow" style="width: 25rem;">
+    <div class="card border border-secondary m-2 p-0 shadow" style="width: 27rem;">
       <div class="card-body">
         <div class="bg-light border border-secondary rounded p-3 mb-3">
-          <h4 class="card-title">@t.Nome</h4>
+          <h5 class="card-title font-weight-bold">@t.Nome</h5>
           <hr/>
           <div class="mb-1">
             <i class="fa fa-exclamation-circle"></i>
-            <span class="card-subtitle font-weight-bold @Prioridades.FromVal(t.Prioridade).CssClass">
-              Prioridade: @Prioridades.FromVal(t.Prioridade).Name
+            <span class="card-subtitle font-weight-bold">
+              Prioridade: 
+            </span>
+            <span class="@Prioridades.FromVal(t.Prioridade).CssClass">
+              @Prioridades.FromVal(t.Prioridade).Name
             </span>
           </div>
           <div>
             <i class="fa fa-address-book"></i>
-            <span class="card-subtitle font-weight-bold">Livro/Curso: @t.Bibligrafia</span>
+            <span class="card-subtitle font-weight-bold">Livro/Curso:</span>
+            <span>@t.Bibligrafia</span>
           </div>
           <div class="mb-1">
             <i class="fa fa-book-reader"></i>
-            <span class="card-subtitle font-weight-bold">Unidade/Capítulo: @t.Unidade</span>
+            <span class="card-subtitle font-weight-bold">Unidade/Capítulo:</span>
+            <span>@t.Unidade</span>
           </div>
           <div class="mb-1">
             <i class="fa fa-clock"></i>
-            <span class="card-subtitle font-weight-bold">Horas estudadas: @t.FHorasEstudadas</span>
+            <span class="card-subtitle font-weight-bold">Horas estudadas:</span>
+            <span>@t.FHorasEstudadas</span>
           </div>
           <div class="mb-1">
             <i class="fa fa-award"></i>
-            <span class="card-subtitle font-weight-bold">Meta: @t.FMetaHoras</span>
+            <span class="card-subtitle font-weight-bold">Meta:</span>
+            <span>@t.FMetaHoras</span>
           </div>
           <p class="card-text text-justify">@t.Descricao</p>
         </div>

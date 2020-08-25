@@ -21,6 +21,9 @@ namespace AgendaEstudos
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseKestrel(options => {
+                        options.ListenLocalhost(5010);
+                    });
                 });
     }
 }

@@ -44,7 +44,9 @@ namespace AgendaEstudos.Controllers {
         
         [HttpPost]
         public IActionResult Atualizar(Tarefa tarefa) {
-            _repository.Atualizar(tarefa);
+            
+            _repository.UpdateNonDefaultFields(tarefa);
+            
             return RedirectToAction("Listar", tarefa);
         }
         

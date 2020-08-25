@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
 
+#nullable enable
 namespace AgendaEstudos.Models.Repository {
     public class EFTarefaRepository : ITarefaRepository {
 
@@ -57,6 +57,71 @@ namespace AgendaEstudos.Models.Repository {
             tarefa.HorasEstudadas = 0;
             _context.Tarefas.Update(tarefa);
             _context.SaveChanges();
+        }
+
+        public void UpdateUnidade(Tarefa inputTarefa) {
+            using (_context) {
+                Tarefa? tarefa = _context.Tarefas
+                    .FirstOrDefault(t => t.TarefaID == inputTarefa.TarefaID);
+                if (tarefa == null) return;
+                
+                tarefa.Unidade = inputTarefa.Unidade;
+                _context.SaveChanges();
+            }
+        }
+        
+        public int UpdateNonDefaultFields(Tarefa inputTarefa) {
+            int updated = 0;
+            using (_context) {
+                Tarefa? tarefa = _context.Tarefas
+                    .FirstOrDefault(t => t.TarefaID == inputTarefa.TarefaID);
+                if (tarefa == null) return 0;
+
+                if (FieldHasUpdatedTo(tarefa.Bibligrafia, inputTarefa.Bibligrafia)) {
+                    tarefa.Bibligrafia = inputTarefa.Bibligrafia;
+                    Console.WriteLine("BBT " + tarefa.Bibligrafia);
+                    updated++;
+                }
+                if (FieldHasUpdatedTo(tarefa.Unidade, inputTarefa.Unidade)) {
+                    tarefa.Unidade = inputTarefa.Unidade;
+                    Console.WriteLine("Uni " + tarefa.Unidade);
+                    updated++;
+                }
+                if (FieldHasUpdatedTo(tarefa.Descricao,inputTarefa.Descricao) ) {
+                    tarefa.Descricao = inputTarefa.Descricao;
+                    Console.WriteLine("Descricao" + tarefa.Descricao);
+                    updated++;
+                }
+                if (FieldHasUpdatedTo(tarefa.Prioridade,inputTarefa.Prioridade) ) {
+                    tarefa.Prioridade = inputTarefa.Prioridade;
+                    Console.WriteLine("Prioridade" + tarefa.Prioridade);
+                    updated++;
+                }
+                if (FieldHasUpdatedTo(tarefa.HorasEstudadas,inputTarefa.HorasEstudadas) ) {
+                    tarefa.HorasEstudadas = inputTarefa.HorasEstudadas;
+                    Console.WriteLine("HorasEstudadas " + tarefa.HorasEstudadas);
+                    updated++;
+                }
+                if (FieldHasUpdatedTo(tarefa.MetaHoras,inputTarefa.MetaHoras) ) {
+                    tarefa.MetaHoras = inputTarefa.MetaHoras;
+                    Console.WriteLine("MetaHoras " + tarefa.MetaHoras);
+                    updated++;
+                }
+                if (updated == 0) return 0;
+                
+                Console.WriteLine("Salvando " + updated);
+
+                _context.SaveChanges(); 
+                return updated;
+            }
+        }
+        
+        private bool FieldHasUpdatedTo(string formerState, string updatedState) {
+            Console.WriteLine(formerState +  " " + updatedState);
+            return updatedState != null && !formerState.Equals(updatedState);
+        }
+        private bool FieldHasUpdatedTo(double formerState, double updatedState) {
+            return !Math.Round(updatedState, 1).Equals(default) && !formerState.Equals(updatedState);
         }
     }
 }

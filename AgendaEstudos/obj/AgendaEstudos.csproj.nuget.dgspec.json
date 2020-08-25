@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/gustavo/Documents/Repositorios/StudyPlanner/AgendaEstudos/AgendaEstudos.csproj": {}
+    "/home/gustavo/Documents/Projetos/Repositorios/StudyPlanner/AgendaEstudos/AgendaEstudos.csproj": {}
   },
   "projects": {
-    "/home/gustavo/Documents/Repositorios/StudyPlanner/AgendaEstudos/AgendaEstudos.csproj": {
+    "/home/gustavo/Documents/Projetos/Repositorios/StudyPlanner/AgendaEstudos/AgendaEstudos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/gustavo/Documents/Repositorios/StudyPlanner/AgendaEstudos/AgendaEstudos.csproj",
+        "projectUniqueName": "/home/gustavo/Documents/Projetos/Repositorios/StudyPlanner/AgendaEstudos/AgendaEstudos.csproj",
         "projectName": "AgendaEstudos",
-        "projectPath": "/home/gustavo/Documents/Repositorios/StudyPlanner/AgendaEstudos/AgendaEstudos.csproj",
+        "projectPath": "/home/gustavo/Documents/Projetos/Repositorios/StudyPlanner/AgendaEstudos/AgendaEstudos.csproj",
         "packagesPath": "/home/gustavo/.nuget/packages/",
-        "outputPath": "/home/gustavo/Documents/Repositorios/StudyPlanner/AgendaEstudos/obj/",
+        "outputPath": "/home/gustavo/Documents/Projetos/Repositorios/StudyPlanner/AgendaEstudos/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/gustavo/.nuget/NuGet/NuGet.Config"

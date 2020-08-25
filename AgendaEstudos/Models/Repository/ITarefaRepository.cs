@@ -13,5 +13,6 @@ namespace AgendaEstudos.Models.Repository {
         public void DeletarTarefa(Tarefa tarefa);
         public void ReiniciarHorasEstudadas(IEnumerable<Tarefa> tarefas);
         public void DeletarTarefas(IEnumerable<Tarefa> tarefas);
+        public int UpdateNonDefaultFields(Tarefa inputTarefa);
     }
 }
