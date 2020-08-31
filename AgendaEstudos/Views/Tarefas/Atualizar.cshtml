@@ -9,10 +9,6 @@
       
       @* TODO: refatorar -> atualizar apenas campos modificados *@
       <input type="hidden" value="@Model.TarefaID" asp-for="TarefaID"/>
-      <input type="hidden" value="@Model.Nome" asp-for="Nome"/>
-      <input type="hidden" value="@Model.HorasEstudadas" asp-for="HorasEstudadas"/>
-      <input type="hidden" value="@Model.MetaHoras" asp-for="MetaHoras"/>
-      <input type="hidden" value="@Model.CriadaEm" asp-for="CriadaEm"/>
       
       <div class="form-group">
         <label>Livro/Curso:</label>
@@ -30,9 +26,13 @@
       </div>
         
       <div class="form-group">
-        <label>Prioridade</label>
-        <input type="range" min="@Prioridades.Minima.Value" max="@Prioridades.Maxima.Value" step="0.5" 
-               list="ticks" asp-for="Prioridade" value="@Model.Prioridade" id="prioridade"/>
+        <div>
+          <label>Prioridade: </label>
+          <span id="outPrioridade" class="text-dark"></span>
+        </div>
+        
+        <input type="range" min="@Prioridades.Minima.Value" max="@Prioridades.Maxima.Value" step="0.5"
+               list="ticks" asp-for="Prioridade" value="@Model.Prioridade" id="inputPrioridade"/>
         <datalist id="ticks">
           <option value="@Prioridades.Minima.Value"/>
           <option value="@Prioridades.Baixa.Value"/>
@@ -47,3 +47,6 @@
     </form>
   </div>
 </div>
+@section Scripts {
+  @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); };
+}

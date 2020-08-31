@@ -3,6 +3,7 @@
 <div class="container">
   <h2>Criar Tarefa</h2>
   <div>
+    <h3 id="contador"></h3>
     <form asp-action="CriarTarefa" method="post" 
           onsubmit="confirmUpdate.disabled=true; confirmUpdate.value='Aguarde'; return true;">
       
@@ -32,6 +33,7 @@
           <label>Prioridade: </label>
           <span id="outPrioridade" class="text-dark"></span>
         </div>
+        
         <input type="range" min="@Prioridades.Minima.Value" max="@Prioridades.Maxima.Value" step="0.5"
                list="ticks" asp-for="Prioridade" value="@Prioridades.Normal.Value" id="inputPrioridade"/>
         <datalist id="ticks">

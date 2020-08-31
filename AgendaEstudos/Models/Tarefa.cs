@@ -40,6 +40,9 @@ namespace AgendaEstudos.Models {
         [NotMapped]
         public double HorasEstudadasPonderadas { get; set; }
 
+        [NotMapped]
+        public string FTempoFaltante
+            => TimeSpan.FromHours(MetaHoras - HorasEstudadas).ToString(@"hh\:mm\:ss");
         
         public override string ToString() {
             return $"Tarefa(ID: {TarefaID} Nome: {Nome})";

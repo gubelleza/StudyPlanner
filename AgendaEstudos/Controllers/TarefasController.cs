@@ -17,7 +17,7 @@ namespace AgendaEstudos.Controllers {
         [HttpGet]
         public ViewResult Listar()
             => View(_repository.ListarTarefas()
-                .OrderBy(t =>Math.Round(t.HorasEstudadas/t.MetaHoras))
+                .OrderBy(t => t.HorasEstudadas/t.MetaHoras)
                 .ThenByDescending(t => t.Prioridade)
             );
         
@@ -44,7 +44,9 @@ namespace AgendaEstudos.Controllers {
         
         [HttpPost]
         public IActionResult Atualizar(Tarefa tarefa) {
-            _repository.Atualizar(tarefa);
+            
+            _repository.UpdateNonDefaultFields(tarefa);
+            
             return RedirectToAction("Listar", tarefa);
         }
         
