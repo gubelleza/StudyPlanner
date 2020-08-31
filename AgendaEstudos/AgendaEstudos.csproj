@@ -78,6 +78,10 @@
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </Content>
+      <Content Update="wwwroot\js\showCardInfo.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
     </ItemGroup>
 
     <ItemGroup>
@@ -101,6 +105,21 @@
       <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\js\bootstrap.js.map" />
       <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\js\bootstrap.min.js" />
       <_ContentIncludedByDefault Remove="wwwroot\lib\twitter-bootstrap\js\bootstrap.min.js.map" />
+      <_ContentIncludedByDefault Remove="site\site\web.config" />
+      <_ContentIncludedByDefault Remove="site\web.config" />
+      <_ContentIncludedByDefault Remove="site\AgendaEstudos.deps.json" />
+      <_ContentIncludedByDefault Remove="site\AgendaEstudos.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="site\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="site\appsettings.json" />
+      <_ContentIncludedByDefault Remove="site\libman.json" />
+      <_ContentIncludedByDefault Remove="site\site\AgendaEstudos.deps.json" />
+      <_ContentIncludedByDefault Remove="site\site\AgendaEstudos.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="site\site\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="site\site\appsettings.json" />
+      <_ContentIncludedByDefault Remove="site\site\aws-windows-deployment-manifest.json" />
+      <_ContentIncludedByDefault Remove="site\site\dotnet-core-tutorial.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="site\site\global.json" />
+      <_ContentIncludedByDefault Remove="site\site\libman.json" />
     </ItemGroup>
 
 </Project>

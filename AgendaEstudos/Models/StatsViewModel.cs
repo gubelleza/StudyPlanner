@@ -7,11 +7,11 @@ namespace AgendaEstudos.Models {
         public IEnumerable<Tarefa> Tarefas { get; set; }
         public double HorasTotais { get; set; }
         public double MetaGeral { get; set; }        
-        
-        public string FHorasTotais
-            => TimeSpan.FromHours(HorasTotais).ToString(@"hh\:mm\:ss");
-        
-        public string FMetaGeral => 
-            $"{(int) MetaGeral}:{60 * (MetaGeral - (int)MetaGeral):00}";
+
+        public string TempoDecorrido(double periodo) {
+            int minutos = (int)Math.Round(60 * (periodo - (int)periodo), 0);
+            int minutosF = minutos == 60 ? 0 : minutos;
+            return $"{(int) periodo}:{minutosF:00}";
+        }
     }
 }
